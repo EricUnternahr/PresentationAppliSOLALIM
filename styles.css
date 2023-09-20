@@ -1,0 +1,170 @@
+body {
+    color:black;
+    background-color:white;
+    background: linear-gradient( #9577e6, #779ce6,#77e6c1); 
+    background-attachment:fixed;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh; /* 100% de la hauteur de la fenêtre */
+            position: relative;
+    }
+
+h1 h2 {font-family: 'Oswald', sans-serif; }
+
+
+#boxApp {
+    width: 450px; 
+    height: 805px; 
+    background-image:url(images/fond\ appli.png);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    justify-content: flex-start; 
+    padding: 20px;
+}
+
+#menu {
+    height: 160px;
+}
+
+#ligneVide {
+    height: 50px;
+}
+
+#pageTitre { 
+    color: beige;
+    height: 100px;
+    align-items:center;
+    
+}
+
+#rowPage {
+    display: grid;
+    grid: repeat(3, 60px) ;
+    align-items: center;
+}
+
+.navbar-collapse.collapse.show {
+    transform: none;
+}
+
+/* #menu .navbar-toggler-icon {
+    color: #FF0000; 
+}
+.navbar-toggler .fas.fa-bars {
+    color: rgb(195, 52, 52); 
+} */
+
+#navbarNav {
+    align-items: right;
+}
+.navbar-nav {
+    align-items: flex-start;
+    position: fixed;
+    z-index: 100;
+}
+
+.navbar-nav li a {
+    color :rgb(4, 4, 4);
+    text-align: center;
+    font-weight: 600;
+}
+
+.navbar-nav li a:hover {
+    color: rgb(254, 255, 254);
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    
+}
+
+/* .navbar-toggler-icon {
+    color: rgb(239, 239, 243);
+    border:none;
+} */
+
+
+#LigneVideSsMenu {
+    height: 60px;
+}
+
+.custom-button .hover-image,
+.custom-button .active-image {
+    display: none;
+}
+.custom-button:hover .normal-image {
+    display: none;
+}
+
+.custom-button:hover .hover-image {
+    display: block;
+}
+
+.custom-button:active .hover-image {
+    display: none;
+}
+
+.custom-button:active .active-image {
+    display: block;
+}
+
+
+footer {
+    background-color: #34475E;
+    color: white;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#thumbnailArbo {
+    visibility: hidden;
+}
+
+#thumbnailSolalim {
+    visibility: hidden
+}
+#thumbnailMoodboard {
+    visibility: hidden
+}
+#thumbnailStyle {
+    visibility: hidden
+}
+
+#thumbnailPerso {
+    visibility: hidden
+}
+
+.fullscreen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@media screen and (max-height: 1060px) {
+    footer {
+        display: none;
+    }
+}
+
+
