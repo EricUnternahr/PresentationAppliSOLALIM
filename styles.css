@@ -1,16 +1,15 @@
 body {
     color:black;
-    background-color:white;
     background: linear-gradient( #9577e6, #779ce6,#77e6c1); 
     background-attachment:fixed;
     font-family: 'Roboto', sans-serif;
-    min-height: 100vh; /* 100% de la hauteur de la fenêtre */
-            position: relative;
+    min-height: 100vh; 
+    position: relative;
     }
 
 h1 h2 {font-family: 'Oswald', sans-serif; }
 
-
+/* BOX DE L'APPLI */
 #boxApp {
     width: 450px; 
     height: 805px; 
@@ -19,13 +18,9 @@ h1 h2 {font-family: 'Oswald', sans-serif; }
     flex-direction: column;
     align-items: flex-end; 
     justify-content: flex-start; 
-    padding: 20px;
+    padding: 40px;
 }
-
-#menu {
-    height: 160px;
-}
-
+/* LIGNE VIDE TOUT EN HAUT DE LA PAGE POUR UNE ESPACE ENTRE LE TOP ET LE TITRE */
 #ligneVide {
     height: 50px;
 }
@@ -34,25 +29,23 @@ h1 h2 {font-family: 'Oswald', sans-serif; }
     color: beige;
     height: 100px;
     align-items:center;
-    
 }
 
-#rowPage {
-    display: grid;
-    grid: repeat(3, 60px) ;
-    align-items: center;
+/* MENU */
+#menu {
+    height: 160px;
 }
 
 .navbar-collapse.collapse.show {
     transform: none;
 }
 
-/* #menu .navbar-toggler-icon {
+#menu .navbar-toggler-icon {
     color: #FF0000; 
 }
 .navbar-toggler .fas.fa-bars {
     color: rgb(195, 52, 52); 
-} */
+}
 
 #navbarNav {
     align-items: right;
@@ -91,7 +84,7 @@ h1 h2 {font-family: 'Oswald', sans-serif; }
 
 
 #LigneVideSsMenu {
-    height: 60px;
+    height: 80px;
 }
 
 .custom-button .hover-image,
