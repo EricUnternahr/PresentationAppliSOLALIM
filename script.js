@@ -177,3 +177,4 @@ clickPerso.addEventListener('click',()=>{
     clickPers = !clickPers; 
 });
 
+// ! BOUTON SWITCH

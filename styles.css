@@ -1,6 +1,6 @@
 body {
     color:black;
-    background: linear-gradient( #9577e6, #779ce6,#77e6c1); 
+    background: linear-gradient( hsl(198, 93%, 28%), #06B8B1,#77e6c1); 
     background-attachment:fixed;
     font-family: 'Roboto', sans-serif;
     min-height: 100vh; 
@@ -21,9 +21,7 @@ h1 h2 {font-family: 'Oswald', sans-serif; }
     padding: 40px;
 }
 /* LIGNE VIDE TOUT EN HAUT DE LA PAGE POUR UNE ESPACE ENTRE LE TOP ET LE TITRE */
-#ligneVide {
-    height: 50px;
-}
+
 
 #pageTitre { 
     color: beige;
@@ -66,27 +64,12 @@ h1 h2 {font-family: 'Oswald', sans-serif; }
     color: rgb(254, 255, 254);
 }
 
-.menu-content {
-    display: none;
-    position: absolute;
-    top: 40px;
-    right: 0;
-    background-color: #fff;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    
-}
-
-/* .navbar-toggler-icon {
-    color: rgb(239, 239, 243);
-    border:none;
-} */
-
-
+/* LIGNE ESPACE ENTRE HUT DE L'APPLI ET LES INPUTS */
 #LigneVideSsMenu {
-    height: 80px;
+    height: 50px;
 }
 
+/* BOUTONS PERSO EN HOVER ACTIVE NORMAL */
 .custom-button .hover-image,
 .custom-button .active-image {
     display: none;
@@ -107,6 +90,9 @@ h1 h2 {font-family: 'Oswald', sans-serif; }
     display: block;
 }
 
+#inscription {
+    color : rgb(5, 95, 169);
+}
 
 footer {
     background-color: #34475E;
@@ -119,6 +105,8 @@ footer {
     right: 0;
 }
 
+
+/* IMAGES CACHEES SUR LES COTES */
 #thumbnailArbo {
     visibility: hidden;
 }
@@ -153,6 +141,53 @@ footer {
     max-width: 100%;
     max-height: 100%;
 }
+
+
+/*!BOUTON SWITCH*/
+/* on cache le bouton check */
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+/* apparence et comportement du bouton */
+#butSwitch {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 116px;
+	height: 50px;
+	background-image:url(images/boutons/jour.png);
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+#butSwitch:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 40px;
+	height: 40px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + #butSwitch {
+	background-image:url(images/boutons/nuit.png);
+}
+
+input:checked + #butSwitch:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+#butSwitch:active:after {
+	width: 130px;
+}
+
+
 
 @media screen and (max-height: 1060px) {
     footer {
