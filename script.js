@@ -21,25 +21,35 @@ const togglePassword = document.querySelector('#togglePassword');
             togglePassword.querySelector('i').classList.toggle('bi-eye');
         });
 
-// IMAGE ARBORESCENCE
-//! AGRANDIR IMAGE A 100%
-const fullscreenArbo = document.getElementById('imgArbo');
-const thumbArbo = document.getElementById('thumbnailArbo');
-
-// Ajout d'un écouteur d'événements pour quitter le mode plein écran
+// //! AGRANDIR IMAGE A 100%
+function activerModePleinEcran(imgMiniature, imgPleinEcran) {
 document.addEventListener('fullscreenchange', () => {
     if (!document.fullscreenElement) {
-        fullscreenArbo.style.display = 'none';
+    imgPleinEcran.style.display = 'none';
     }
 });
-// Ajout d'un écouteur d'événements pour le clic sur l'image miniature
-thumbArbo.addEventListener('click', () => {
-    // Activer le mode plein écran
+imgMiniature.addEventListener('click', () => {
     if (document.fullscreenEnabled) {
-        fullscreenArbo.style.display = 'flex';
-        fullscreenArbo.requestFullscreen();
+    imgPleinEcran.style.display = 'flex';
+    imgPleinEcran.requestFullscreen();
     }
 });
+}
+
+// IMAGE ARBO
+activerModePleinEcran(document.getElementById('thumbnailArbo'), document.getElementById('imgArbo'));
+
+// IMAGE SOLALIM
+activerModePleinEcran(document.getElementById('thumbnailSolalim'), document.getElementById('imgSolalim'));
+
+// IMAGE MOODBOARD
+activerModePleinEcran(document.getElementById('thumbnailMoodboard'), document.getElementById('imgMoodboard'));
+
+// IMAGE STYLE
+activerModePleinEcran(document.getElementById('thumbnailStyle'), document.getElementById('imgStyle'));
+
+// IMAGE PERSONNAS
+activerModePleinEcran(document.getElementById('thumbnailPerso'), document.getElementById('imgPerso'));
 
 //! AFFICHE L'IMAGE QUAND LE MENU EST CLICK
 const focusMenu = document.querySelector(".navbar-toggler");
@@ -51,28 +61,7 @@ focusMenu.addEventListener('click',()=>{
     clickMenu = !clickMenu; 
 });
 
-
-// IMAGE SOLALIM
-//! AGRANDIR IMAGE A 100%
-const fullscreenSolalim = document.getElementById('imgSolalim');
-const thumbSolalim = document.getElementById('thumbnailSolalim');
-
-// Ajout d'un écouteur d'événements pour quitter le mode plein écran
-document.addEventListener('fullscreenchange', () => {
-    if (!document.fullscreenElement) {
-        fullscreenSolalim.style.display = 'none';
-    }
-});
-// Ajout d'un écouteur d'événements pour le clic sur l'image miniature
-thumbSolalim.addEventListener('click', () => {
-    // Activer le mode plein écran
-    if (document.fullscreenEnabled) {
-        fullscreenSolalim.style.display = 'flex';
-        fullscreenSolalim.requestFullscreen();
-    }
-});
-
-//! AFFICHE L'IMAGE QUAND LE MENU EST CLICK
+//! AFFICHE L'IMAGE QUAND LE LOGO EST CLICK
 const clickSolalim = document.querySelector("#logo");
 const miniatSolalim = document.querySelector("#thumbnailSolalim");
 
@@ -83,27 +72,8 @@ clickSolalim.addEventListener('click',()=>{
     clickSol = !clickSol; 
 });
 
-// IMAGE MOODBOARD
-//! AGRANDIR IMAGE A 100%
-const fullscreenMoodboard = document.getElementById('imgMoodboard');
-const thumbMoodboard = document.getElementById('thumbnailMoodboard');
 
-// Ajout d'un écouteur d'événements pour quitter le mode plein écran
-document.addEventListener('fullscreenchange', () => {
-    if (!document.fullscreenElement) {
-        fullscreenMoodboard.style.display = 'none';
-    }
-});
-// Ajout d'un écouteur d'événements pour le clic sur l'image miniature
-thumbMoodboard.addEventListener('click', () => {
-    // Activer le mode plein écran
-    if (document.fullscreenEnabled) {
-        fullscreenMoodboard.style.display = 'flex';
-        fullscreenMoodboard.requestFullscreen();
-    }
-});
-
-//! AFFICHE L'IMAGE QUAND LE MENU EST CLICK
+//! AFFICHE L'IMAGE QUAND LE LOGO EST CLICK
 const clickMoodboard = document.querySelector("#logo");
 const miniatMoodboard = document.querySelector("#thumbnailMoodboard");
 
@@ -114,27 +84,9 @@ clickMoodboard.addEventListener('click',()=>{
     clickMood = !clickMood; 
 });
 
-// IMAGE STYLE
-//! AGRANDIR IMAGE A 100%
-const fullscreenStyle = document.getElementById('imgStyle');
-const thumbStyle = document.getElementById('thumbnailStyle');
 
-// Ajout d'un écouteur d'événements pour quitter le mode plein écran
-document.addEventListener('fullscreenchange', () => {
-    if (!document.fullscreenElement) {
-        fullscreenStyle.style.display = 'none';
-    }
-});
-// Ajout d'un écouteur d'événements pour le clic sur l'image miniature
-thumbStyle.addEventListener('click', () => {
-    // Activer le mode plein écran
-    if (document.fullscreenEnabled) {
-        fullscreenStyle.style.display = 'flex';
-        fullscreenStyle.requestFullscreen();
-    }
-});
 
-//! AFFICHE L'IMAGE QUAND LE MENU EST CLICK
+//! AFFICHE L'IMAGE QUAND LE LOGO EST CLICK
 const clickStyle = document.querySelector("#logo");
 const miniatStyle = document.querySelector("#thumbnailStyle");
 
@@ -145,25 +97,6 @@ clickStyle.addEventListener('click',()=>{
     clickStyl = !clickStyl; 
 });
 
-// IMAGE PERSONNA
-//! AGRANDIR IMAGE A 100%
-const fullscreenPerso = document.getElementById('imgPerso');
-const thumbPerso = document.getElementById('thumbnailPerso');
-
-// Ajout d'un écouteur d'événements pour quitter le mode plein écran
-document.addEventListener('fullscreenchange', () => {
-    if (!document.fullscreenElement) {
-        fullscreenPerso.style.display = 'none';
-    }
-});
-// Ajout d'un écouteur d'événements pour le clic sur l'image miniature
-thumbPerso.addEventListener('click', () => {
-    // Activer le mode plein écran
-    if (document.fullscreenEnabled) {
-        fullscreenPerso.style.display = 'flex';
-        fullscreenPerso.requestFullscreen();
-    }
-});
 
 //! AFFICHE L'IMAGE QUAND LE MENU EST CLICK
 const clickPerso = document.querySelector("#identifiant");
@@ -178,3 +111,20 @@ clickPerso.addEventListener('click',()=>{
 });
 
 // ! BOUTON SWITCH
+const switchElement = document.getElementById('switch');
+
+const body = document.body;
+
+//on ecoute le bouton
+switchElement.addEventListener('change', () => {
+  // boucle sur l'eta du switch
+  if (switchElement.checked) {
+    // Si ça switch on passe en Mode sombre 
+    body.classList.remove('body-light');
+    body.classList.add('body-dark');
+  } else {
+    //  sinon Mode clair 
+    body.classList.remove('body-dark');
+    body.classList.add('body-light');
+  }
+});

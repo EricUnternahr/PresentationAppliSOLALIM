@@ -1,11 +1,21 @@
 body {
     color:black;
-    background: linear-gradient( hsl(198, 93%, 28%), #06B8B1,#77e6c1); 
     background-attachment:fixed;
+    background: linear-gradient( hsl(198, 93%, 28%), #06B8B1,#77e6c1);
     font-family: 'Roboto', sans-serif;
     min-height: 100vh; 
     position: relative;
+}
+
+
+.body-light {
+    
+    background: linear-gradient( hsl(198, 93%, 28%), #06B8B1,#77e6c1); 
     }
+
+.body-dark {
+    background: linear-gradient( hsl(198, 100%, 6%), #013735,#254b3e); 
+}   
 
 h1 h2 {font-family: 'Oswald', sans-serif; }
 
