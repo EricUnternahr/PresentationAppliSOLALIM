@@ -83,3 +83,4 @@ switchElement.addEventListener('change', () => {
         document.body.classList.add('body-light');
     }
 });
+

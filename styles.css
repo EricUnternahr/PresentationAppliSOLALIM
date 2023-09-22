@@ -19,6 +19,14 @@ body {
 
 h1 h2 {font-family: 'Oswald', sans-serif; }
 
+#pageTitre { 
+    color: beige;
+    height: 100px;
+    align-items:center;
+    font-weight: 700;
+    text-shadow: 3px 2px #150a0a;
+}
+
 /* BOX DE L'APPLI */
 #boxApp {
     width: 450px; 
@@ -30,14 +38,6 @@ h1 h2 {font-family: 'Oswald', sans-serif; }
     justify-content: flex-start; 
     padding: 40px;
 }
-/* LIGNE VIDE TOUT EN HAUT DE LA PAGE POUR UNE ESPACE ENTRE LE TOP ET LE TITRE */
-
-
-#pageTitre { 
-    color: beige;
-    height: 100px;
-    align-items:center;
-}
 
 /* MENU */
 #menu {
@@ -48,17 +48,12 @@ h1 h2 {font-family: 'Oswald', sans-serif; }
     transform: none;
 }
 
-#menu .navbar-toggler-icon {
-    color: #FF0000; 
-}
-.navbar-toggler .fas.fa-bars {
-    color: rgb(195, 52, 52); 
-}
-
 #navbarNav {
     align-items: right;
+    
 }
 .navbar-nav {
+    background-color: #f5a478;
     align-items: flex-start;
     position: fixed;
     z-index: 100;
@@ -74,9 +69,14 @@ h1 h2 {font-family: 'Oswald', sans-serif; }
     color: rgb(254, 255, 254);
 }
 
+.navbar.hover-menu.collapse {
+    transform: scale(2);
+
+}
+
 /* LIGNE ESPACE ENTRE HUT DE L'APPLI ET LES INPUTS */
 #LigneVideSsMenu {
-    height: 50px;
+    height: 10px;
 }
 
 /* BOUTONS PERSO EN HOVER ACTIVE NORMAL */
@@ -179,7 +179,7 @@ input[type=checkbox]{
 	left: 5px;
 	width: 40px;
 	height: 40px;
-	background: #fff;
+	background: #f7f5f5;
 	border-radius: 90px;
 	transition: 0.3s;
 }
@@ -194,7 +194,7 @@ input:checked + #butSwitch:after {
 }
 
 #butSwitch:active:after {
-	width: 130px;
+	width: 40px;
 }
 
 
