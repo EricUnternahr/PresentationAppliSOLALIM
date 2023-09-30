@@ -1,16 +1,12 @@
-//!Permet de derouler le menu au passage de la souris
-document.addEventListener("DOMContentLoaded", function () {
-    const hoverMenu = document.querySelector(".hover-menu");
-    const menuCollapse = hoverMenu.querySelector(".collapse");
-    
-    hoverMenu.addEventListener("mouseenter", function () {
-        menuCollapse.classList.add("show");
-    });
-    
-    hoverMenu.addEventListener("mouseleave", function () {
-        menuCollapse.classList.remove("show");
-    });
-});
+// //!Permet de derouler le menu au passage de la souris
+// document.addEventListener("DOMContentLoaded", function () {
+//     const hoverMenu = document.querySelector("#hambMenu");
+//     const modalScrollableCenter = new bootstrap.Modal(document.querySelector("#modalScrollableCenter"));
+
+//     hoverMenu.addEventListener("mouseenter", function () {
+//         modalScrollableCenter.show();
+//     });
+// });
 
 //! VOIR LE MOT DE PASSE EN CLAIR
 const togglePassword = document.querySelector('#togglePassword');
@@ -49,7 +45,7 @@ function activerModePleinEcran(imgMiniature, imgPleinEcran) {
 
 // IMAGE ARBO
 activerModePleinEcran(document.getElementById('thumbnailArbo'), document.getElementById('imgArbo'));
-toggleThumbnailOnClick(document.querySelector(".navbar-toggler"), document.querySelector("#thumbnailArbo"));
+toggleThumbnailOnClick(document.querySelector("#hambMenu"), document.querySelector("#thumbnailArbo"));
 
 // IMAGE SOLALIM
 activerModePleinEcran(document.getElementById('thumbnailSolalim'), document.getElementById('imgSolalim'));
@@ -70,17 +66,17 @@ toggleThumbnailOnClick(document.querySelector("#identifiant"), document.querySel
 // ! BOUTON SWITCH
 const switchElement = document.getElementById('switch');
 
-//on ecoute le bouton
+
 switchElement.addEventListener('change', () => {
-  // boucle sur l'etat du switch
-    if (switchElement.checked) {
-    // Si ça switch on passe en Mode sombre 
-        document.body.classList.remove('body-light');
-        document.body.classList.add('body-dark');
-    } else {
-    //  sinon Mode clair 
-        document.body.classList.remove('body-dark');
-        document.body.classList.add('body-light');
-    }
+const bodyElement = document.body;
+
+
+if (switchElement.checked) {
+    bodyElement.classList.remove('body-light');
+    bodyElement.classList.add('body-dark');
+} else {
+    bodyElement.classList.remove('body-dark');
+    bodyElement.classList.add('body-light');
+}
 });
 

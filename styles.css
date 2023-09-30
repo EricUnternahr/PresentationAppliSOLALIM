@@ -1,24 +1,30 @@
 body {
-    color:black;
-    background-attachment:fixed;
-    background: linear-gradient( hsl(198, 93%, 28%), #06B8B1,#77e6c1);
+    color:rgb(5, 5, 5);
     font-family: 'Roboto', sans-serif;
     min-height: 100vh; 
     position: relative;
+
 }
 
 
 .body-light {
-    
-    background: linear-gradient( hsl(198, 93%, 28%), #06B8B1,#77e6c1); 
-    }
+    background-image: radial-gradient(circle, #047773,#06B8B1, #87CEEB, #b2dff0);
 
-.body-dark {
-    background: linear-gradient( hsl(198, 100%, 6%), #013735,#254b3e); 
-}   
+}
 
+.body-dark{
+    background-image: radial-gradient(circle, #046c69 , #013836 , #012726 , #000909 );
+}
+#logo{
+    -webkit-filter: drop-shadow(2px 2px 2px #343434);
+    filter: drop-shadow(2px 2px 2px #3d3d3d);
+}
 h1 h2 {font-family: 'Oswald', sans-serif; }
 
+#logosola{
+    -webkit-filter: drop-shadow(2px 2px 2px #343434);
+    filter: drop-shadow(2px 2px 2px #3d3d3d);
+}
 #pageTitre { 
     color: beige;
     height: 100px;
@@ -44,33 +50,39 @@ h1 h2 {font-family: 'Oswald', sans-serif; }
     height: 160px;
 }
 
-.navbar-collapse.collapse.show {
-    transform: none;
+.custom-modal-content {
+    max-width: 400px;
+    /* margin: 45px; */
+    background: #292727;
+    text-align: center;
+
 }
 
-#navbarNav {
-    align-items: right;
+.modal-header{
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal-dialog {
+    display: flex;
+    justify-content: center;
+    padding-right: auto;
+}
+#menuModal{
+    font-weight: bold;
+}
+
+.modal-title {
+    color: #f7f5f5;
+    text-align: center;
     
 }
-.navbar-nav {
-    background-color: #f5a478;
-    align-items: flex-start;
-    position: fixed;
-    z-index: 100;
-}
 
-.navbar-nav li a {
-    color :rgb(4, 4, 4);
-    text-align: center;
-    font-weight: 600;
-}
-
-.navbar-nav li a:hover {
-    color: rgb(254, 255, 254);
-}
-
-.navbar.hover-menu.collapse {
-    transform: scale(2);
+.modal-header, .modal-body {
+    background-color: #180900;
+    color: #fff9f5;
+    font-size: x-large;
+    font-weight: 250;
 
 }
 
@@ -120,7 +132,6 @@ footer {
 #thumbnailArbo {
     visibility: hidden;
 }
-
 #thumbnailSolalim {
     visibility: hidden
 }
@@ -170,6 +181,8 @@ input[type=checkbox]{
 	display: block;
 	border-radius: 100px;
 	position: relative;
+    -webkit-filter: drop-shadow(2px 2px 2px #343434);
+    filter: drop-shadow(2px 2px 2px #3d3d3d);
 }
 
 #butSwitch:after {

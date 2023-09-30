@@ -22,7 +22,7 @@
     <!-- JAVSCRIPT -->
     <script async src="script.js"></script>
 </head>
-<body>
+<body class="body-light">
     <!--!PAGE PRINCIPALE-->
 
     <div id="page" class = "container ">
@@ -40,7 +40,7 @@
             <div id="pageTitre" class="container col-12">
                 <div class="row">
                     <div class="col-4 text-end">
-                        <img src="/images/logo solalim.png" width="autopx" height="140px" alt="logo">
+                        <img id="logosola" src="/images/logo solalim.png" width="autopx" height="140px" alt="logo">
                     </div>
                     <div class="col-8">
                         <h1 class="d-flex align-items-center" id="pageTitre">APPLICATION SOLALIM</h1>
@@ -113,31 +113,36 @@
                             <!--*MENU APPLI  -->
                             <div class="col-2">
                                 <!-- Menu hamburger -->
-                                <nav class="navbar hover-menu">
-                                    <div class="container-fluid ">
-                                        <button id="hamburger" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                        <i class="fa-solid fa-bars fa-xl"></i> <!-- Icône FontAwesome -->
-                                        </button>
-                                        <!-- Contenu du menu -->
-                                        <div id="navbarNav" class="collapse navbar-collapse ">
-                                            <ul class="navbar-nav">
-                                                <li class="nav-item ">
+                                <div class="m-4">
+                                    <!-- Image menu hamburger -->
+                                    <a id = "hambMenu" href="#modalScrollableCenter" role="button" class="btn" data-bs-toggle="modal">
+                                        <img src="/images/boutons/hamburger_button_menu_icon_155296.png" alt="Bouton Image">
+                                    </a>
+                                    <!-- Scrollable Modal HTML -->
+                                    <div id="modalScrollableCenter" class="modal fade" tabindex="-1">
+                                        <div class="modal-dialog custom-modal-dialog modal-dialog-centered modal-dialog-scrollable ">
+                                            <div class="modal-content custom-modal-content">
+                                                <div class="modal-header">
+                                                    <p id="menuModal">Menu</p>
+                                                </div>
+                                                <div class="modal-body">
                                                     <a class="nav-link" href="#">Connexion</a>
-                                                </li>
-                                                <li class="nav-item">
+                                                    <br>
                                                     <a class="nav-link" href="#">Réseau</a>
-                                                </li>
-                                                <li class="nav-item">
+                                                    <br>
                                                     <a class="nav-link" href="#">Commande</a>
-                                                </li>
-                                                <li class="nav-item">
+                                                    <br>
                                                     <a class="nav-link" href="#">Mon compte</a>
-                                                </li>
-                                            </ul>
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </nav>
+                                </div>
                             </div>
                         </div>
                     </div>
