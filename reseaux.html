@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ii<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,7 +22,7 @@
     <!-- JAVSCRIPT -->
     <script async src="script.js"></script>
 </head>
-<body class="body-light">
+<body class="body-dark">
     <!--!PAGE PRINCIPALE-->
 
     <div id="page" class = "container ">
@@ -40,7 +40,7 @@
             <div id="pageTitre" class="container col-12">
                 <div class="row">
                     <div class="col-4 text-end">
-                        <img src="/images/logo solalim.png" width="autopx" height="140px" alt="logo">
+                        <img id="logosola" src="/images/logo solalim.png" width="autopx" height="140px" alt="logo">
                     </div>
                     <div class="col-8">
                         <h1 class="d-flex align-items-center" id="pageTitre">APPLICATION SOLALIM</h1>
@@ -65,7 +65,7 @@
                                     <img src="/images/Solalim CIVAM.png" alt="Image en plein écran">
                                 </div>
                                 <!-- Image miniature -->
-                                <img id="thumbnailSolalim" src="/images/thumbSolalim CIVAM.png" alt="Image miniature" style="cursor: pointer;">
+                                <img id="thumbnailSolalim" class="thumbnail" src="/images/thumbSolalim CIVAM.png" alt="Image miniature" style="cursor: pointer;">
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                                     <img src="/images/moodboard.png" alt="Image en plein écran">
                                 </div>
                                 <!-- Image miniature -->
-                                <img id="thumbnailMoodboard" src="/images/Thumbmoodboard.png" alt="Image miniature" style="cursor: pointer;">
+                                <img id="thumbnailMoodboard" class="thumbnail" src="/images/Thumbmoodboard.png" alt="Image miniature" style="cursor: pointer;">
                             </div>
                         </div>
                     </div>
@@ -87,7 +87,7 @@
                                     <img src="/images/style tile.png" alt="Image en plein écran">
                                 </div>
                                 <!-- Image miniature -->
-                                <img id="thumbnailStyle" src="/images/thumb style tile.png" alt="Image miniature" style="cursor: pointer;">
+                                <img id="thumbnailStyle" class="thumbnail" src="/images/thumb style tile.png" alt="Image miniature" style="cursor: pointer;">
                             </div>
                         </div>
                     </div>
@@ -123,16 +123,13 @@
                                         <div class="modal-dialog custom-modal-dialog modal-dialog-centered modal-dialog-scrollable ">
                                             <div class="modal-content custom-modal-content">
                                                 <div class="modal-header">
-                                                    <p>Menu</p>
+                                                    <p id="menuModal">Menu</p>
                                                 </div>
-                                                <div class="modal-body">
-                                                    <a class="nav-link" href="#">Connexion</a>
-                                                    <br>
-                                                    <a class="nav-link" href="#">Réseau</a>
-                                                    <br>
-                                                    <a class="nav-link" href="#">Commande</a>
-                                                    <br>
-                                                    <a class="nav-link" href="#">Mon compte</a>
+                                                <div class="modal-body custom-body">
+                                                    <a class="custom-link" href="#">Connexion</a>
+                                                    <a class="custom-link" href="reseaux.html">Réseau</a>
+                                                    <a class="custom-link" href="#">Commande</a>
+                                                    <a class="custom-link" href="#">Mon compte</a>
                                                     <br>
                                                     <br>
                                                     <br>
@@ -206,7 +203,7 @@
                                     <img src="/images/arborescence.PNG" alt="Image en plein écran">
                                 </div>
                                 <!-- Image miniature -->
-                                <img id="thumbnailArbo" src="/images/thumbArborescence.png" alt="Image miniature" style="cursor: pointer;">
+                                <img id="thumbnailArbo" class="thumbnail" src="/images/thumbArborescence.png" alt="Image miniature" style="cursor: pointer;">
                             </div>
                         </div>
                     </div>
@@ -217,7 +214,7 @@
                                     <img src="/images/personnas.png" alt="Image en plein écran">
                                 </div>
                                 <!-- Image miniature -->
-                                <img id="thumbnailPerso" src="/images/thumbPersonnas.png" alt="Image miniature" style="cursor: pointer;">
+                                <img id="thumbnailPerso" class="thumbnail" src="/images/thumbPersonnas.png" alt="Image miniature" style="cursor: pointer;">
                             </div>
                         </div>
                     </div>

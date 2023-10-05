@@ -22,7 +22,7 @@ body {
     bottom: 0;
     width: 20px;
     aspect-ratio: 1/1;
-    background: #fca311;
+    background: #fc9611;
     box-shadow: 0 0 10px #ff5400, 0 0 30px #ff5400, 0 0 50px #ff5400;
     border-radius: 50%;
     animation: animate 5s linear forwards;
@@ -30,36 +30,36 @@ body {
 
 @keyframes animate {
     0% {
-        transform: translateY(0);
+        transform: translateY(-100vh);
         opacity: 0;
     }
     50% {
-        opacity: 1;
+        opacity: 0.5;
     }
     100% {
-        transform: translateY(-100vh);
+        transform: translateY(10vh);
         opacity: 1;
     }
 }
 
-        /* .circle:before {
+        .circle:before {
             content: "";
             position: absolute;
             bottom: 100%;
             left: 25%;
             width: 50%;
-            height: 100vh;
+            height: 110vh;
             opacity: 0.5;
             background: linear-gradient(#ff5400, transparent);
 
-        } */
+        }
         </style>
 </head>
 <body>
     <script>
         function createCircle() {
-    let sizeW = Math.random() * 22;
-    let duration = Math.random() * 3;
+    let sizeW = Math.random() * 25;
+    let duration = Math.random() * 5;
     let circle = document.createElement("div");
     circle.classList.add("circle");
     document.body.appendChild(circle);
