@@ -1,9 +1,10 @@
-ii<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SOLALIM Réseaux</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon solalim.png">
     <!-- Font ROBOTO -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,14 +14,14 @@ ii<!DOCTYPE html>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:wght@300&display=swap" rel="stylesheet"> 
     <!-- feuille de style CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleReseaux.css">
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- Librairie AWESONE -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <!-- JAVSCRIPT -->
-    <script async src="script.js"></script>
+    <script async src="scriptReseaux.js"></script>
 </head>
 <body class="body-dark">
     <!--!PAGE PRINCIPALE-->
@@ -31,110 +32,75 @@ ii<!DOCTYPE html>
 
         <div id="rowPage"class="row ">
 
-        <div class="container ">
-            <div class="row text-end m-2">
-                <div class=" d-flex justify-content-end align-items-center">
-                    <input type="checkbox" id="switch" /><label id="butSwitch" for="switch"></label>
+            <div class="container ">
+                <div class="row text-end m-2">
+                    <div class=" d-flex justify-content-end align-items-center">
+                        <input type="checkbox" id="switch" /><label id="butSwitch" for="switch"></label>
+                    </div>
+                </div>
+                <div id="pageTitre" class="container col-12">
+                    <div class="row">
+                        <div class="col-4 text-end">
+                            <a href="index.html"><img id="logosola" src="/images/logo solalim.png" width="autopx" height="140px" alt="logo"></a>
+                        </div>
+                        <div class="col-8">
+                            <h1 class="d-flex align-items-center" id="pageTitre">APPLICATION SOLALIM</h1>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="pageTitre" class="container col-12">
-                <div class="row">
-                    <div class="col-4 text-end">
-                        <img id="logosola" src="/images/logo solalim.png" width="autopx" height="140px" alt="logo">
-                    </div>
-                    <div class="col-8">
-                        <h1 class="d-flex align-items-center" id="pageTitre">APPLICATION SOLALIM</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!--! CONTAINER APPLI ET COTE -->
+            <!--! CONTAINER APPLI ET COTE -->
 
-        <div class="container">
-            <div class="row justify-content-center flex-nowrap">
+            <div class="container">
+                <div class="row justify-content-center flex-nowrap">
 
-                <!--! PAGEGAUCHE DE L'APPLI -->
+                    <!--! PAGEGAUCHE DE L'APPLI -->
 
-                <div id="pageGauche" class="col-5 ">
-                    <!--* HISTORIQUE SOLALIM -->
-                    <div class="container mt-5">
-                        <div class="row ">
-                            <div class="col 12 text-end">
-                                <div id="imgSolalim" class="fullscreen ">
-                                    <img src="/images/Solalim CIVAM.png" alt="Image en plein écran">
+                    
+                    <!--! BOITE DE L'APPLI -->
+                    <div id="boxApp" class="col-2">
+
+                        <!--! ROW HEADER APPLI-->                      
+
+                        <div class="container">
+                            <div id="menu" class="row align-items-center">
+
+                                <!--! HEADER APPLI -->
+
+                                <!--* LOGO -->
+                                <div class="col-8 ">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <a href="index.html"> <img id = "logo" src="/images/logo solalim.png" width="80px" height="80px" alt="logo"></a>
+                                    </div>
                                 </div>
-                                <!-- Image miniature -->
-                                <img id="thumbnailSolalim" class="thumbnail" src="/images/thumbSolalim CIVAM.png" alt="Image miniature" style="cursor: pointer;">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container mt-5">
-                        <div class="row ">
-                            <div class="col 12 text-end">
-                                <div id="imgMoodboard" class="fullscreen ">
-                                    <img src="/images/moodboard.png" alt="Image en plein écran">
-                                </div>
-                                <!-- Image miniature -->
-                                <img id="thumbnailMoodboard" class="thumbnail" src="/images/Thumbmoodboard.png" alt="Image miniature" style="cursor: pointer;">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container mt-5">
-                        <div class="row ">
-                            <div class="col 12 text-end">
-                                <div id="imgStyle" class="fullscreen ">
-                                    <img src="/images/style tile.png" alt="Image en plein écran">
-                                </div>
-                                <!-- Image miniature -->
-                                <img id="thumbnailStyle" class="thumbnail" src="/images/thumb style tile.png" alt="Image miniature" style="cursor: pointer;">
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!--! BOITE DE L'APPLI -->
-                <div id="boxApp" class="col-2">
-
-                    <!--! ROW HEADER APPLI-->                      
-
-                    <div class="container">
-                        <div id="menu" class="row align-items-center">
-
-                        <!--! HEADER APPLI -->
-
-                            <!--* LOGO -->
-                            <div class="col-8 ">
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <img id = "logo" src="/images/logo solalim.png" width="80px" height="80px" alt="logo">
-                                </div>
-                            </div>
-
-                            <!--*MENU APPLI  -->
-                            <div class="col-2">
-                                <!-- Menu hamburger -->
-                                <div class="m-4">
-                                    <!-- Image menu hamburger -->
-                                    <a id = "hambMenu" href="#modalScrollableCenter" role="button" class="btn" data-bs-toggle="modal">
-                                        <img src="/images/boutons/hamburger_button_menu_icon_155296.png" alt="Bouton Image">
-                                    </a>
-                                    <!-- Scrollable Modal HTML -->
-                                    <div id="modalScrollableCenter" class="modal fade" tabindex="-1">
-                                        <div class="modal-dialog custom-modal-dialog modal-dialog-centered modal-dialog-scrollable ">
-                                            <div class="modal-content custom-modal-content">
-                                                <div class="modal-header">
-                                                    <p id="menuModal">Menu</p>
-                                                </div>
-                                                <div class="modal-body custom-body">
-                                                    <a class="custom-link" href="#">Connexion</a>
-                                                    <a class="custom-link" href="reseaux.html">Réseau</a>
-                                                    <a class="custom-link" href="#">Commande</a>
-                                                    <a class="custom-link" href="#">Mon compte</a>
-                                                    <br>
-                                                    <br>
-                                                    <br>
-                                                    <br>
-                                                    <br>
+                                <!--*MENU APPLI  -->
+                                <div class="col-2">
+                                    <!-- Menu hamburger -->
+                                    <div class="m-4">
+                                        <!-- Image menu hamburger -->
+                                        <a id = "hambMenu" href="#modalScrollableCenter" role="button" class="btn" data-bs-toggle="modal">
+                                            <img src="/images/boutons/hamburger_button_menu_icon_155296.png" alt="Bouton Image">
+                                        </a>
+                                        <!-- Scrollable Modal HTML -->
+                                        <div id="modalScrollableCenter" class="modal fade" tabindex="-1">
+                                            <div class="modal-dialog custom-modal-dialog modal-dialog-centered modal-dialog-scrollable ">
+                                                <div class="modal-content custom-modal-content">
+                                                    <div class="modal-header">
+                                                        <p id="menuModal">Menu</p>
+                                                    </div>
+                                                    <div class="modal-body custom-body">
+                                                        <a class="custom-link" href="monCompte.html">Mon compte</a>
+                                                        <a class="custom-link" href="#">Commande</a>
+                                                        <a class="custom-link" href="reseaux.html">Réseau</a>
+                                                        <a class="custom-link" href="#">Gestion des commandes</a>                                                    
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -142,87 +108,62 @@ ii<!DOCTYPE html>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                <!--! BODY DE L'APPLI -->
+                        <!--! BODY DE L'APPLI -->
 
-                <!--* LIGNE VIDE -->
-                <div class="container  ">
-                    <div id="LigneVideSsMenu" class="row  ">
-                        <div id = "ligneEspace" >
-                        </div>
-                    </div>
-                </div>
-                <!--*FORMULAIRE DE CONNECTION -->
-                <div class="container mt-5 text-center">
-                    <h1>Connectez-vous</h1>
-                    <form>
-                        <div class="mb-3">
-                            <label id = "identifiant" for="identifiant" class="form-label"><h4>Identifiant</h2></label>
-                            <input type="text" class="form-control" id="identifiant" name="identifiant" placeholder="Votre identifiant">
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label"><h4>Mot de passe</h4></label>
-                            <div class="input-group">
-                                <input type="password" class="form-control" id="password" name="password" placeholder="Votre mot de passe">
-                                <button class="btn btn-outline-secondary" type="button" id="togglePassword">
-                                    <i class="bi bi-eye"></i>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
-                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
-                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
-                                    </svg>
-                                </button>
+                        <!--* LIGNE VIDE -->
+                        <div class="container">
+                            <div id="LigneVideSsMenu" class="row  ">
+                                <div id = "ligneEspace" >
+                                </div>
                             </div>
                         </div>
-                        <a href="monCompte.html">
-                        <button id="btonForm" type="submit" class="btn custom-button">
-                            <img src="/images/boutons/Se connecter.png" alt="Image" class="normal-image">
-                            <img src="/images/boutons/Se connecter hover.png" alt="Image au survol" class="hover-image">
-                            <img src="/images/boutons/Se connecter active.png" alt="Image au clic" class="active-image">
-                        </button>
-                        </a>
+                        <!--BOITES RESEAUX-->
+                        <div class="container text-center">
+                        <h1>Les Réseaux</h1>
+                        </div>
+                        <div id="containBoite" class=" container  text-center custom-scrollbar-y">
+
+                            <!-- Boites les POT-POTES -->
+                            <div class="row">
+                                <div  id="BoitePotsPotes" class="col-10 mx-auto">
+                                    <div class="ma-boite text-center">
+                                        <img id="lesPotsPotes" src="/images/reseau/favicon.png" alt="images du groupe les biotineuses">
+                                        <h4>Les POT-POTES</h4>
+                                        <p class="description"> Capendu, Douzens, Barbaira, Marseillette</p>
+                                    </div>
+                                </div>
+                            </div>
                         
-                        <div>
-                        <div>
-                            <a id="inscription" href="/reseaux.html">Pas encore inscrit?</a>
-                        </div>
-
-                        </div>
-                    </form>
-                </div>
-                </div>
-
-                <!--! PAGE DE DROITE DE L'APPLI -->
-                
-                <div id="pageDroite" class="col-5 ">
-                <!-- ARBOSRESCENCE DU MENU -->
-                    <div class="container mt-5">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div id="imgArbo" class="fullscreen">
-                                    <img src="/images/arborescence.PNG" alt="Image en plein écran">
+                            <!-- boite LOCO-->
+                            <div class="row">
+                                <div  id="BoitesLoco" class="col-10 mx-auto">
+                                    <div class="ma-boite text-center">
+                                        <img id="LocoMinges" src="/images/reseau/Fichier_9logo-loco_tqqB5ku.jpg" alt="images du groupe LocoMinges">
+                                        <h4>LOCO'MINGES</h4>
+                                        <p class="description"> Saint-Gaudens, 31</p>
+                                    </div>
                                 </div>
-                                <!-- Image miniature -->
-                                <img id="thumbnailArbo" class="thumbnail" src="/images/thumbArborescence.png" alt="Image miniature" style="cursor: pointer;">
                             </div>
-                        </div>
-                    </div>
-                    <div class="container mt-5">
-                        <div class="row ">
-                            <div class="col 12 text-start">
-                                <div id="imgPerso" class="fullscreen ">
-                                    <img src="/images/personnas.png" alt="Image en plein écran">
+
+                            <!-- Boite les BIOTINEUSES -->                     
+                            <div class="row">
+                                <div id="Boite1"  class="col-10 mx-auto">
+                                    <div class="ma-boite text-center">
+                                        <img id="lesBiotineuses" src="/images/reseau/les_biotineuses.jpeg" alt="images du groupe les biotineuses">
+                                        <h4>Les Biotineuses</h4>
+                                        <p class="description"> Pradelles en Val, Lagrasse, Serviès</p>
+                                    </div>
                                 </div>
-                                <!-- Image miniature -->
-                                <img id="thumbnailPerso" class="thumbnail" src="/images/thumbPersonnas.png" alt="Image miniature" style="cursor: pointer;">
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
+                <!--! PAGE DE DROITE DE L'APPLI -->
+                
 
 <!--! FOOTER DE LA PAGE -->
     <footer class="bg-dark text-light text-center py-3">

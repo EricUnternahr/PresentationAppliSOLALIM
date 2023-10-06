@@ -1,13 +1,3 @@
-// //!Permet de derouler le menu au passage de la souris
-// document.addEventListener("DOMContentLoaded", function () {
-//     const hoverMenu = document.querySelector("#hambMenu");
-//     const modalScrollableCenter = new bootstrap.Modal(document.querySelector("#modalScrollableCenter"));
-
-//     hoverMenu.addEventListener("mouseenter", function () {
-//         modalScrollableCenter.show();
-//     });
-// });
-
 //! VOIR LE MOT DE PASSE EN CLAIR
 const togglePassword = document.querySelector('#togglePassword');
 const password = document.querySelector('#password');
@@ -18,7 +8,7 @@ togglePassword.addEventListener('click', () => {
     togglePassword.querySelector('i').classList.toggle('bi-eye');
 });
 
-// //! AFFICHE L'IMAGE QUAND LE MENU EST CLICK
+// //! AFFICHE L'IMAGE QUAND L ELEMENT EST CLICK
 function toggleThumbnailOnClick(triggerElement, thumbnailElement) {
     let isThumbnailVisible = true;
     triggerElement.addEventListener('click', () => {
@@ -27,6 +17,7 @@ function toggleThumbnailOnClick(triggerElement, thumbnailElement) {
         isThumbnailVisible = !isThumbnailVisible;
     });
 }
+
 
 // //! AGRANDIR IMAGE A 100%
 function activerModePleinEcran(imgMiniature, imgPleinEcran) {
@@ -61,15 +52,13 @@ toggleThumbnailOnClick(document.querySelector("#logo"), document.querySelector("
 
 // IMAGE PERSONNAS
 activerModePleinEcran(document.getElementById('thumbnailPerso'), document.getElementById('imgPerso'));
-toggleThumbnailOnClick(document.querySelector("#identifiant"), document.querySelector("#thumbnailPerso"));
+toggleThumbnailOnClick(document.querySelector("#identifiantLabel"), document.querySelector("#thumbnailPerso"));
 
 // ! BOUTON SWITCH
 const switchElement = document.getElementById('switch');
 
-
 switchElement.addEventListener('change', () => {
 const bodyElement = document.body;
-
 
 if (switchElement.checked) {
     bodyElement.classList.remove('body-dark');
@@ -79,4 +68,15 @@ if (switchElement.checked) {
     bodyElement.classList.add('body-dark');
 }
 });
+
+// ! RECUPERER L IDENTIFIANT
+function saveIdentifiant() {
+    localStorage.setItem("identifiant", document.getElementById("identifiant").value);
+    window.location.href = "monCompte.html";
+    console.log("ça clique")
+    console.log(localStorage.getItem("identifiant"));
+}
+
+
+
 
