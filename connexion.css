@@ -1,0 +1,257 @@
+body {
+    color:rgb(5, 5, 5);
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh; 
+    position: relative;
+
+}
+
+
+.body-light {
+    background-image: radial-gradient(circle, #047773,#06B8B1, #87CEEB, #b2dff0);
+
+}
+
+.body-dark{
+    background-image: radial-gradient(circle, #046c69 , #013836 , #012726 , #000909 );
+}
+#logo{
+    -webkit-filter: drop-shadow(2px 2px 2px #343434);
+    filter: drop-shadow(2px 2px 2px #3d3d3d);
+    width:80px;
+    height:80px;
+}
+h1 h2 {font-family: 'Oswald', sans-serif; }
+
+#logosola{
+    -webkit-filter: drop-shadow(2px 2px 2px #343434);
+    filter: drop-shadow(2px 2px 2px #3d3d3d);
+    width:auto;
+    height:140px;
+}
+#pageTitre1 { 
+    
+    height: 100px;
+}
+#pageTitre { 
+    color: beige;
+    height: 100px;
+    align-items:center;
+    font-weight: 700;
+    text-shadow: 3px 2px #150a0a;
+}
+
+/* BOX DE L'APPLI */
+#boxApp {
+    width: 450px; 
+    height: 805px; 
+    background-image:url(images/fondAppli.png);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    justify-content: flex-start; 
+    padding: 40px;
+}
+
+
+
+.custom-modal-content {
+    max-width: 400px;
+    margin: 45px;
+    background: #292727;
+    text-align: center;
+
+}
+
+.modal-header{
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal-dialog {
+    display: flex;
+    justify-content: center;
+    
+}
+#menuModal{
+    font-weight: bold;
+}
+
+.modal-title {
+    color: #f7f5f5;
+    text-align: center;
+    
+}
+.custom-link {
+    color:#fbf9f5;
+    padding:15px;
+    display: block;
+    text-decoration: none;
+    font-weight: 350;
+}
+.custom-link:hover{
+    color:#f2a813;
+    display: block;
+    text-decoration: none;
+    font-weight: 750;
+}
+
+#nav:hover{
+    color:#043332
+}
+
+.modal-header, .modal-body {
+    background-color: #180900;
+    color: #fff9f5;
+    font-size: x-large;
+    font-weight: 250; 
+
+}
+
+/* LIGNE ESPACE ENTRE HUT DE L'APPLI ET LES INPUTS */
+#LigneVideSsMenu {
+    height: 80px;
+}
+
+/* BOUTONS PERSO EN HOVER ACTIVE NORMAL */
+.custom-button .hover-image,
+.custom-button .active-image {
+    display: none;
+}
+.custom-button:hover .normal-image {
+    display: none;
+}
+
+.custom-button:hover .hover-image {
+    display: block;
+}
+
+.custom-button:active .hover-image {
+    display: none;
+}
+
+.custom-button:active .active-image {
+    display: block;
+}
+
+#inscription {
+    color : rgb(5, 95, 169);
+}
+
+footer {
+    background-color: #34475E;
+    color: white;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+/* IMAGES CACHEES SUR LES COTES */
+#thumbnailArbo {
+    visibility: hidden;
+    transition: transform 0.5s ease-in-out;
+}
+#thumbnailSolalim {
+    visibility: hidden;
+    transition: transform 0.5s ease-in-out;
+}
+.thumbnail:hover {
+
+    transform:  scale(1.2);
+}
+.thumbnail:hover:after {
+
+    transform:  scale(1);
+}
+
+#thumbnailMoodboard {
+    visibility: hidden;
+    transition: transform 0.5s ease-in-out;
+}
+#thumbnailStyle {
+    visibility: hidden;
+    transition: transform 0.5s ease-in-out;
+}
+
+#thumbnailPerso {
+    visibility: hidden;
+    transition: transform 0.5s ease-in-out;
+}
+
+.fullscreen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/*!BOUTON SWITCH*/
+/* on cache le bouton check */
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+/* apparence et comportement du bouton */
+#butSwitch {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 116px;
+	height: 50px;
+	background-image:url(images/boutons/nuit.png);
+	display: block;
+	border-radius: 100px;
+	position: relative;
+    -webkit-filter: drop-shadow(2px 2px 2px #343434);
+    filter: drop-shadow(2px 2px 2px #3d3d3d);
+}
+
+#butSwitch:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 40px;
+	height: 40px;
+	background: #f7f5f5;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + #butSwitch {
+	background-image:url(images/boutons/jour.png);
+}
+
+input:checked + #butSwitch:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+#butSwitch:active:after {
+	width: 40px;
+}
+
+
+
+@media screen and (max-height: 1060px) {
+    footer {
+        display: none;
+    }
+}
+
+
