@@ -23,6 +23,7 @@
     <!-- JAVSCRIPT -->
     <script async src="accueil.js"></script>
 </head>
+
 <body class="body-dark">
     <!--!PAGE PRINCIPALE-->
 
@@ -55,9 +56,13 @@
             <div class="container">
                 <div class="row justify-content-center flex-nowrap">
 
-                    <!--! PAGEGAUCHE DE L'APPLI -->
-
-                    
+                    <!--! PAGE GAUCHE DE L'APPLI -->
+                    <div id="pageGauche" class="col-5 ">
+                        <div class="container mt-5">
+                            <div class="row ">
+                            </div>
+                        </div>
+                    </div>
 
                     <!--! BOITE DE L'APPLI -->
                     <div id="boxApp" class="col-2">
@@ -135,22 +140,50 @@
                         <div class="container">
                             <div id="ligneVide" class="row">
                             </div>
-
                             <div class="row" >
-                                <div class="col-1 p-0 mt-0">
+                                <div class="col-6 ps-3" >
+                                    <div  id="monCompte" class="mx-auto">
+                                        <div class="ma-boite text-center" onclick="redirigerVersMonCompte()">
+                                            <p class="menu">Mon compte</p>
+                                            <p class="description"> Mes coordonnées</p>
+                                            <p class="description"> Mon mot de passe</p>
+                                            <p class="description"> Me desinscrire</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div   class="col-11 p-0 mt-0">
-                                    
-                                    <ol id="menuAccueil">
-                                        <li><a href="monCompte.html">Mon compte</a></li>
-                                        <li><a href="#">Mes commandes</a></li>
-                                        <li><a href="#">Gestion des commandes</a></li>
-                                        <li><a href="#">Les réseaux</a></li>
-                                    </ol>
+                                <div class="col-6 ps-3 ">
+                                    <div  id="mesCommandes" class="mx-auto">
+                                        <div class="ma-boite text-center" onclick="redirigerVersmesCommandes()">
+                                            <p class="menu">Mes commandes</p>
+                                            <p class="description"> Passées</p>
+                                            <p class="description"> en cours</p>
+                                            
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-
-                        
+                            <div class="row pt-4" >
+                                <div class="col-6 ps-3">
+                                    <div  id="GestionDesCommandes" class="mx-auto">
+                                        <div class="ma-boite text-center" onclick="redirigerVersGererCommandes()">
+                                            <p class="menu">Gestion des commandes</p>
+                                            <p class="description"> Créér</p>
+                                            <p class="description"> Modifier</p>
+                                            <p class="description"> Supprimer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 ps-3 ">
+                                    <div  id="lesReseaux" class="mx-auto">
+                                        <div class="ma-boite text-center " onclick="redirigerVersReseaux()">
+                                            <p class="menu">Les reseaux</p>
+                                            <p class="description"> Mon reseau</p>
+                                            <p class="description"> La carte</p>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-12 p-5 text-center">
                                     <button id="btonForm" type="button" class="btn custom-button" onclick="redirigerVersConnexion()">
@@ -161,11 +194,23 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                     <!--! PAGE DE DROITE DE L'APPLI -->
-                    
+                    <div id="pageDroite" class="col-5 ">
+                        <!-- ARBOSRESCENCE DU MENU -->
+                        <div class="container mt-5">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div id="diagSeq" class="fullscreen">
+                                        <img src="/images/diagrammeSequence.PNG" alt="Image en plein écran">
+                                    </div>
+                                    <!-- Image miniature -->
+                                    <img id="thumbnailDiagSeq" class="thumbnail" src="/images/thumbDiagSeq.png" alt="Image miniature" style="cursor: pointer;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     
                 </div>
             </div>
@@ -179,8 +224,6 @@
             <p><a href="mentions-legales.html" class="text-light">Mentions légales</a></p>
         </div>
     </footer>
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     

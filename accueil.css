@@ -54,30 +54,9 @@ h1 h2 {font-family: 'Oswald', sans-serif; }
 }
 
 #ligneVide{
-    height: 80px;
+    height: 20px;
 }
 
-#menuAccueil li{
-    padding-left: 1em;
-    padding-bottom: 1em;
-    list-style-type: none; 
-
-}
-#menuAccueil a {
-    font-size: 25px; 
-    font-weight: bolder; 
-    color: #150a0a;
-    text-decoration: none; 
-    
-}
-
-#menuAccueil a:hover {
-    color: #f9fafa; /* Couleur du texte au survol */
-}
-
-#menuAccueil a:active {
-    color: #f5ad12; /* Couleur du texte au clic */
-}
 
 
 .custom-modal-content {
@@ -168,9 +147,7 @@ h1 h2 {font-family: 'Oswald', sans-serif; }
 
 #lesPotsPotes{
     width: 100%;
-    height: auto;
-    
-    
+    height: auto;  
 }
 
 footer {
@@ -186,11 +163,7 @@ footer {
 
 
 /* IMAGES CACHEES SUR LES COTES */
-#thumbnailArbo {
-    visibility: hidden;
-    transition: transform 0.5s ease-in-out;
-}
-#thumbnailSolalim {
+#thumbnailDiagSeq {
     visibility: hidden;
     transition: transform 0.5s ease-in-out;
 }
@@ -203,19 +176,6 @@ footer {
     transform:  scale(1);
 }
 
-#thumbnailMoodboard {
-    visibility: hidden;
-    transition: transform 0.5s ease-in-out;
-}
-#thumbnailStyle {
-    visibility: hidden;
-    transition: transform 0.5s ease-in-out;
-}
-
-#thumbnailPerso {
-    visibility: hidden;
-    transition: transform 0.5s ease-in-out;
-}
 
 .fullscreen {
     width: 100%;
@@ -233,8 +193,42 @@ footer {
     max-width: 100%;
     max-height: 100%;
 }
+/*BOITES MENU*/
+.ma-boite {
+    background-color: #ee6109;
+    border: 3px solid #f1f0f0; 
+    border-radius: 25px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    color:#f1f0f0;
+    height: 150px;
+    width: 150px;
+    padding-top: 20px;
+    
+    
+    
+}
+.ma-boite:hover{
+    transform:  scale(1.1);
+}
+.ma-boite:hover:after{
+    transform:  scale(1);
+}
+.description{
+    color:#180900;
+    font-size: 12px;
+    line-height: 5px;
 
-
+}
+.menu{        
+    font-size: 22px;
+    line-height: 25px;
+    font-weight: bolder;
+    
+}
+#monCompte{
+    transition: transform 0.5s ease-in-out;
+}
 /*!BOUTON SWITCH*/
 /* on cache le bouton check */
 input[type=checkbox]{
