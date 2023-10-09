@@ -15,7 +15,6 @@ if (switchElement.checked) {
 
 // ! BOITES RESEAUX
 
-// Function to create a new div with specified content
 function createNewDiv(idImage,imageSrc, title, description) {
     const newDiv = document.createElement('div');
     newDiv.innerHTML = `<div class="col-12 mx-auto">
@@ -36,12 +35,10 @@ function createNewDiv(idImage,imageSrc, title, description) {
     return newDiv;
 }
 
-// Function to replace the div
 function replaceDiv(oldDiv, newDiv) {
     oldDiv.replaceWith(newDiv);
 }
 
-// Function to return to the initial state
 function returnToInitialState(newDiv, originalDiv) {
     newDiv.replaceWith(originalDiv);
 }
@@ -76,7 +73,7 @@ const newDivLoco = createNewDiv(
     'Saint-Gaudens, 31 Le Loco Minges est une épicerie coopérative où trouver des produits locaux de saison, sélectionnés par et pour les Loco Mangeurs.'
 );
 
-// Add click event listeners 
+// Clic listener
 oldDiv1.addEventListener('click', () => replaceDiv(oldDiv1, newDivBiotineuses));
 newDivBiotineuses.addEventListener('click', () => returnToInitialState(newDivBiotineuses, oldDiv1));
 

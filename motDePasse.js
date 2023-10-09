@@ -119,13 +119,7 @@ if (switchElement.checked) {
 }
 });
 
-// ! RECUPERER L IDENTIFIANT
-// function saveIdentifiant() {
-//     localStorage.setItem("identifiant", document.getElementById("identifiant").value);
-//     window.location.href = "accueil.html";
-//     console.log("ça clique")
-//     console.log(localStorage.getItem("identifiant"));
-// }
+
 
 
 
