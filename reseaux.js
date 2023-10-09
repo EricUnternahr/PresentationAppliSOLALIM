@@ -38,19 +38,17 @@ function createNewDiv(idImage,imageSrc, title, description) {
 
 // Function to replace the div
 function replaceDiv(oldDiv, newDiv) {
-    // Remplacement de la div
     oldDiv.replaceWith(newDiv);
 }
 
 // Function to return to the initial state
 function returnToInitialState(newDiv, originalDiv) {
-    // Remplacement de la nouvelle div par la div d'origine
     newDiv.replaceWith(originalDiv);
 }
 
-// Original Div for #Boite1
+// Original Div #Boite1
 const oldDiv1 = document.querySelector('#Boite1');
-// New Div for Les Biotineuses
+// New Div Les Biotineuses
 const newDivBiotineuses = createNewDiv(
     'id="lesBiotineuses"',
     '/images/reseau/les_biotineuses.jpeg',
@@ -58,9 +56,9 @@ const newDivBiotineuses = createNewDiv(
     'Adhérents du groupement d\'achat de Lagrasse et villages des alentours. Lieux et dates de distribution à Pradelles en Val, Lagrasse, Serviès (relatifs aux commandes.)'
 );
 
-// Original Div for #BoitePotsPotes
+// Original Div  #BoitePotsPotes
 const oldDiv2 = document.querySelector('#BoitePotsPotes');
-// New Div for Les Pots-Potes
+// New Div Les Pots-Potes
 const newDivPotsPotes = createNewDiv(
     'id="lesPotsPotes"',
     '/images/reseau/favicon.png',
@@ -68,9 +66,9 @@ const newDivPotsPotes = createNewDiv(
     'Capendu, Douzens, Barbaira, Marseillette Les pots potes de l Alaric vous proposent une alternative à la grande distribution : écologique, économique, éthique et conviviale !'
 );
 
-// Original Div for #BoiteLoco
+// Original Div #BoiteLoco
 const oldDiv3 = document.querySelector('#BoitesLoco');
-// New Div for Les Pots-Potes
+// New Div Les Pots-Potes
 const newDivLoco = createNewDiv(
     'id="LocoMinges"',
     '/images/reseau/Fichier_9logo-loco_tqqB5ku.jpg',

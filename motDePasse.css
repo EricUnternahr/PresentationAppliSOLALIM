@@ -113,6 +113,11 @@ h1 h2 {font-family: 'Oswald', sans-serif; }
     height: 40px;
 }
 
+/*MESSAGE D'ERREUR MOT DE PASSE*/
+#oldDiv{
+    visibility: hidden;
+}
+
 /* BOUTONS PERSO EN HOVER ACTIVE NORMAL */
 .custom-button .hover-image,
 .custom-button .active-image {

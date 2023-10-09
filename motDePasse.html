@@ -125,8 +125,8 @@
                                 <div class="mb-3">
                                     <h4>Votre ancien Mot de passe</h4>
                                     <div class="input-group">
-                                        <input id="password" type="password" class="form-control" name="password" placeholder="Votre mot de passe">
-                                        <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                        <input id="oldPassword" type="password" class="form-control" name="password" placeholder="Votre mot de passe">
+                                        <button class="btn btn-outline-secondary" type="button" id="toggleOldPassword">
                                             <i class="bi bi-eye"></i>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
                                                 <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
@@ -137,8 +137,8 @@
                                 </div> <div class="mb-3">
                                     <h4>Nouveau Mot de passe</h4>
                                     <div class="input-group">
-                                        <input id="password" type="password" class="form-control" name="password" placeholder="Votre mot de passe">
-                                        <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                        <input id="newPassword" type="password" class="form-control" name="password" placeholder="Votre mot de passe">
+                                        <button class="btn btn-outline-secondary" type="button" id="toggleNewPassword">
                                             <i class="bi bi-eye"></i>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
                                                 <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
@@ -147,12 +147,11 @@
                                         </button>
                                     </div>
                                 </div>
-                                <!-- INPUTS DE CONNECTION -->
                                 <div class="mb-3">
                                     <h4>Repetez Mot de passe</h4>
                                     <div class="input-group">
-                                        <input id="password" type="password" class="form-control" name="password" placeholder="Votre mot de passe">
-                                        <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                        <input id="repeatPassword" type="password" class="form-control" name="password" placeholder="Votre mot de passe">
+                                        <button class="btn btn-outline-secondary" type="button" id="toggleRepeatPassword">
                                             <i class="bi bi-eye"></i>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
                                                 <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
@@ -161,12 +160,15 @@
                                         </button>
                                     </div>
                                 </div>
+                                <div id="oldDiv">
+                                    <p>Votre mot de passe </p>
+                                </div>
                                 <!-- BOUTON PERSO -->
                                 
-                                <button id="btonForm" type="button" class="btn custom-button" onclick="saveIdentifiant()" >
-                                    <img src="/images/boutons/connecter.png" alt="Image" class="normal-image" >
-                                    <img src="/images/boutons/connecterHover.png" alt="Image au survol" class="hover-image">
-                                    <img src="/images/boutons/connecterActive.png" alt="Image au clic" class="active-image">
+                                <button id="btonForm" type="button" class="btn custom-button" onclick="replaceDiv()" >
+                                    <img src="/images/boutons/valider.png" alt="Image" class="normal-image" >
+                                    <img src="/images/boutons/validerHover.png" alt="Image au survol" class="hover-image">
+                                    <img src="/images/boutons/validerActive.png" alt="Image au clic" class="active-image">
                                 </button>
                                 
                                 <!-- LIEN VERS RESEAU -->

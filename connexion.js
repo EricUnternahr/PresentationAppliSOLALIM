@@ -52,7 +52,7 @@ toggleThumbnailOnClick(document.querySelector("#logo"), document.querySelector("
 
 // IMAGE PERSONNAS
 activerModePleinEcran(document.getElementById('thumbnailPerso'), document.getElementById('imgPerso'));
-toggleThumbnailOnClick(document.querySelector("#identifiantLabel"), document.querySelector("#thumbnailPerso"));
+toggleThumbnailOnClick(document.querySelector("#identifiant"), document.querySelector("#thumbnailPerso"));
 
 // ! BOUTON SWITCH
 const switchElement = document.getElementById('switch');
