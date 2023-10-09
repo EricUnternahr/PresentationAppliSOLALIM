@@ -110,12 +110,22 @@ h1 h2 {font-family: 'Oswald', sans-serif; }
 
 /* LIGNE ESPACE ENTRE HUT DE L'APPLI ET LES INPUTS */
 #LigneVideSsMenu {
-    height: 40px;
+    height: 10px;
 }
 
 /*MESSAGE D'ERREUR MOT DE PASSE*/
 #oldDiv{
     visibility: hidden;
+}
+#newDiv{
+    background-color: #df2f08;
+    border: 3px solid #f1f0f0; 
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color:#f1f0f0;
 }
 
 /* BOUTONS PERSO EN HOVER ACTIVE NORMAL */

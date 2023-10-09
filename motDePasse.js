@@ -39,10 +39,10 @@ function replaceDiv(oldPassword, newPassword, repeatPassword) {
     console.log(repeatPasswordValue);
 
     if(oldPasswordValue==="" || newPasswordValue==="" || repeatPasswordValue===""){
-        newDiv.innerHTML = "<p>Certains champs sont vides. Veuillez remplir tous les champs</p>";
+        newDiv.innerHTML = "<p>Certains champs sont vides. Veuillez remplir tous les champs.</p>";
         oldDiv.parentNode.replaceChild(newDiv, oldDiv);
         } else if (newPasswordValue!=repeatPasswordValue){
-            newDiv.innerHTML = "<p>Les mots de passe ne correspondent pas. Veuillez réessayer</p>";
+            newDiv.innerHTML = "<p>Les mots de passe ne correspondent pas. Veuillez réessayer.</p>";
             oldDiv.parentNode.replaceChild(newDiv, oldDiv);
         } else if(oldPasswordValue==newPasswordValue){
             newDiv.innerHTML = "<p>Le nouveau mot de passe doit être différent de l'ancien. Veuillez choisir un nouveau mot de passe.</p>";
