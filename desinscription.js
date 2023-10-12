@@ -10,12 +10,11 @@ togglePassword.addEventListener('click', () => {
 
 //! CLIC DU BOUTON valider
 function redirigerVersConnexion() {
-    window.location.href = "connexion.html";
+    alert("Désinscription prise en compte");
+    setTimeout(function() {
+        window.location.href = "connexion.html";
+    }, 1000);
 }
-
-
-
-
 
 
 // ! BOUTON SWITCH

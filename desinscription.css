@@ -113,19 +113,18 @@ h1 h2 {font-family: 'Oswald', sans-serif; }
     height: 10px;
 }
 
-/*MESSAGE D'ERREUR MOT DE PASSE*/
-#oldDiv{
-    visibility: hidden;
-}
-#newDiv{
-    background-color: #df2f08;
+/*DECO BOITE*/
+.ma-boite {
+    background-color: #cf1111;
     border: 3px solid #f1f0f0; 
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    padding-top: 10px;
-    margin-bottom: 10px;
-    font-weight: 600;
+    border-radius: 25px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+    margin: 5px;
     color:#f1f0f0;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    
 }
 
 /* BOUTONS PERSO EN HOVER ACTIVE NORMAL */
