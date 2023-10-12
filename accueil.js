@@ -39,7 +39,7 @@ function redirigerVersMonCompte() {
     window.location.href = "monCompte.html";
 }
 function redirigerVersmesCommandes() {
-    window.location.href = "mesCommandes.html";
+    window.location.href = "LesCommandes.html";
 }
 function redirigerVersGererCommandes() {
     window.location.href = "gererCommandes.html";

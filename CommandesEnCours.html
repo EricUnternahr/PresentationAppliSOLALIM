@@ -36,7 +36,7 @@
             <div class="container ">
                 <div class="row text-end m-2">
                     <div class=" d-flex justify-content-end align-items-center">
-                        <input type="checkbox" id="switch" ><label id="butSwitch" for="switch"></label>
+                        <input type="checkbox" id="switch"><label id="butSwitch" for="switch"></label>
                     </div>
                 </div>
                 <div id="pageTitre1" class="container col-12">
@@ -56,14 +56,9 @@
             <div class="container">
                 <div class="row justify-content-center flex-nowrap">
 
-                    <!--! PAGE GAUCHE DE L'APPLI -->
-                    <div id="pageGauche" class="col-5 ">
-                        <div class="container mt-5">
-                            <div class="row ">
-                            </div>
-                        </div>
-                    </div>
+                    <!--! PAGEGAUCHE DE L'APPLI -->
 
+                    
                     <!--! BOITE DE L'APPLI -->
                     <div id="boxApp" class="col-2">
 
@@ -72,13 +67,12 @@
                         <div class="container">
                             <div id="menu" class="row align-items-center">
 
-                            <!--! HEADER APPLI -->
+                                <!--! HEADER APPLI -->
 
                                 <!--* LOGO -->
                                 <div class="col-8 ">
                                     <div class="d-flex justify-content-center align-items-center">
-                                        <a  href="accueil.html">
-                                        <img id = "logo"   src="/images/logoSolalim.png"  alt="logo"></a>
+                                        <a href="accueil.html"> <img id = "logo" src="/images/logoSolalim.png" alt="logo"></a>
                                     </div>
                                 </div>
 
@@ -99,9 +93,9 @@
                                                     </div>
                                                     <div class="modal-body custom-body">
                                                         <a class="custom-link" href="monCompte.html">Mon compte</a>
-                                                        <a class="custom-link" href="mesCommandes.css">Commande</a>
-                                                        <a class="custom-link" href="gererCommandes.html">Gestion des commandes</a>                                                    
-                                                        <a class="custom-link" href="reseaux.html">réseaux</a>
+                                                        <a class="custom-link" href="#">Commande</a>
+                                                        <a class="custom-link" href="reseaux.html">Réseau</a>
+                                                        <a class="custom-link" href="#">Gestion des commandes</a>                                                    
                                                         <br>
                                                         <br>
                                                         <br>
@@ -119,85 +113,60 @@
                         <!--! BODY DE L'APPLI -->
 
                         <!--* LIGNE VIDE -->
-                        <div class="container  ">
+                        <div class="container">
                             <div id="LigneVideSsMenu" class="row  ">
                                 <div id = "ligneEspace" >
                                 </div>
                             </div>
                         </div>
-                        <!--*PAGE D ACCUEIL MON COMPTE -->
-                        <div class="container mt-4 ">
-                            <div class="row ">
-                                <div class=col-8>
-                                    <h1>Mes commandes</h1>
-                                </div>
-                                <div class="col-4">
-                                    <img id="lesPotsPotes" src="/images/reseau/logoPots-potes.png" alt="Image du groupe">
-                                </div>
-                            </div>
-                        </div>  
-                        <div class="container">
-                            <div id="ligneVide" class="row">
-                            </div>
-                            <div class="row" >
-                                <div class="col-12 " >
-                                    <div  id="commandeCours" class="mx-auto">
-                                        <div class="ma-boite text-center" onclick="redirigerVerscommandesEnCours()">
-                                            <p class="menu">Commandes reseau en cours</p>
-                                            <p class="description"> Ares Verts Pommes</p>
-                                            <p class="description"> Riz Marseillette</p>
-                                            <p class="description"> Orange Avocats BIOESPUNA</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12  ">
-                                    <div  id="mesCommandesCours" class="mx-auto">
-                                        <div class="ma-boite text-center" onclick="redirigerVersmesCommandesEnCours()">
-                                            <p class="menu">Mes commandes en cours</p>
-                                            <p class="description">Ares Verts Pommes 64€</p>
-                                            <p class="description"> Orange Avocats BIOESPUNA 85€</p>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row " >
-                                <div class="col-12 ">
-                                    <div  id="CommandesPassees" class="mx-auto">
-                                        <div class="ma-boite text-center" onclick="redirigerVersCommandesPassees()">
-                                            <p class="menu">Mes commandes passées</p>
-                                            <p class="description"> Fromages Coop Jura 130€</p>
-                                            <p class="description"> Legumes Trebes 20€</p>
-                                            <p class="description"> L'envoutée Bière Blonde/brune 55€</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <!--BOITES RESEAUX-->
+                        <div class="container text-center">
+                        <h1>Commandes en cours</h1>
                         </div>
-                    </div>
+                        <div id="containBoite" class=" container  text-center custom-scrollbar-y">
 
-                    <!--! PAGE DE DROITE DE L'APPLI -->
-                    <div id="pageDroite" class="col-5 ">
-                        <!-- ARBOSRESCENCE DU MENU -->
-                        <div class="container mt-5">
+                            <!-- Boites Commandes -->
                             <div class="row">
-                                <div class="col-md-6">
-                                    <div id="diagSeq" class="fullscreen">
-                                        <img src="/images/diagrammeSequence.PNG" alt="Image en plein écran">
+                                <div  id="BoiteAresVerts" class="col-10 mx-auto">
+                                    <div class="ma-boite text-center">
+                                        <img id="AresVerts" src="/images/commandes/les-ares-verts-logo.png" alt="images Les ARES VERTS">
+                                        <h4>Les Ares-Verts</h4>
+                                        <p class="description"> Vente de Pomme, purée de pommes, </p>
+                                        <p class="description"> jus de pomme, Chutney, purée de legumes.</p>
                                     </div>
-                                    <!-- Image miniature -->
-                                    <img id="thumbnailDiagSeq" class="thumbnail" src="/images/thumbDiagSeq.png" alt="Image miniature" style="cursor: pointer;">
+                                </div>
+                            </div>
+                        
+                            <!-- boite LOCO-->
+                            <div class="row">
+                                <div  id="Roure" class="col-10 mx-auto">
+                                    <div class="ma-boite text-center">
+                                        <img id="RoureImg" src="/images/reseau/Fichier_9logo-loco_tqqB5ku.jpg" alt="images Riz Marseillette">
+                                        <h4>Riz du Roure</h4>
+                                        <p class="description"> Commande de riz BIO de Marseillette</p>
+                                        <p>Possibilité de commander par 500g au minimum.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Boite les BIOTINEUSES -->                     
+                            <div class="row">
+                                <div id="Boite1"  class="col-10 mx-auto">
+                                    <div class="ma-boite text-center">
+                                        <img id="lesBiotineuses" src="/images/reseau/les_biotineuses.jpeg" alt="images du groupe les biotineuses">
+                                        <h4>Les Biotineuses</h4>
+                                        <p class="description"> Pradelles en Val, Lagrasse, Serviès</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
     </div>
+                <!--! PAGE DE DROITE DE L'APPLI -->
+                
 
 <!--! FOOTER DE LA PAGE -->
     <footer class="bg-dark text-light text-center py-3">
@@ -206,6 +175,8 @@
             <p><a href="mentions-legales.html" class="text-light">Mentions légales</a></p>
         </div>
     </footer>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     
