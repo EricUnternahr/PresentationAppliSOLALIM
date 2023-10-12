@@ -1,33 +1,17 @@
 //! VOIR LE MOT DE PASSE EN CLAIR
-const toggleOldPassword = document.querySelector('#toggleOldPassword');
-const toggleNewPassword = document.querySelector('#toggleNewPassword');
-const toggleRepeatPassword = document.querySelector('#toggleRepeatPassword');
+const togglePassword = document.querySelector('#togglePassword');
+const password = document.querySelector('#password');
 
-const oldPassword = document.querySelector('#oldPassword');
-const newPassword = document.querySelector('#newPassword');
-const repeatPassword = document.querySelector('#repeatPassword');
-
-toggleOldPassword.addEventListener('click', () => {
-    const type = oldPassword.getAttribute('type') === 'password' ? 'text' : 'password';
-    oldPassword.setAttribute('type', type);
-    toggleOldPassword.querySelector('i').classList.toggle('bi-eye');
+togglePassword.addEventListener('click', () => {
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    togglePassword.querySelector('i').classList.toggle('bi-eye');
 });
 
-toggleNewPassword.addEventListener('click', () => {
-    const type = newPassword.getAttribute('type') === 'password' ? 'text' : 'password';
-    newPassword.setAttribute('type', type);
-    toggleNewPassword.querySelector('i').classList.toggle('bi-eye');
-});
-
-toggleRepeatPassword.addEventListener('click', () => {
-    const type = repeatPassword.getAttribute('type') === 'password' ? 'text' : 'password';
-    repeatPassword.setAttribute('type', type);
-    toggleRepeatPassword.querySelector('i').classList.toggle('bi-eye');
-});
-
-
-
-
+//! CLIC DU BOUTON valider
+function redirigerVersConnexion() {
+    window.location.href = "connexion.html";
+}
 
 
 
