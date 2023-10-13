@@ -73,8 +73,7 @@ if (switchElement.checked) {
 function saveIdentifiant() {
     localStorage.setItem("identifiant", document.getElementById("identifiant").value);
     window.location.href = "accueil.html";
-    console.log("ça clique")
-    console.log(localStorage.getItem("identifiant"));
+
 }
 
 

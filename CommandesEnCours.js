@@ -13,17 +13,18 @@ if (switchElement.checked) {
 }
 });
 
-// ! BOITES RESEAUX
+// ! BOITES COMMANDES EN COURS
 
 function createNewDiv(idImage,imageSrc, title, description) {
     const newDiv = document.createElement('div');
-    newDiv.innerHTML = `<div class="col-12 mx-auto">
+
+    newDiv.innerHTML = `<div class="col-11 mx-auto">
                         <div class="ma-boite text-center">
                             <img ${idImage} src="${imageSrc}" alt="Image">
                             <h2>${title}</h2>
                             <p class="description" style="font-size: 18px;">${description}</p>
                             <a href="#">
-                                <button id="btonForm" type="submit" class="btn custom-button">
+                                <button id="btonForm" type="submit" class="btn custom-button"onclick="redirigerVersCommandes()">
                                     <img src="/images/boutons/jecommande.png" alt="Image" class="normal-image">
                                     <img src="/images/boutons/jecommandehover.png" alt="Image au survol" class="hover-image">
                                     <img src="/images/boutons/jecommandeActive.png" alt="Image au clic" class="active-image">
@@ -43,42 +44,47 @@ function returnToInitialState(newDiv, originalDiv) {
     newDiv.replaceWith(originalDiv);
 }
 
-// Original Div #Boite1
+// Original Div #BoiteAresVerts
 const oldDiv1 = document.querySelector('#BoiteAresVerts');
-// New Div Les Biotineuses
-const newDivBiotineuses = createNewDiv(
-    'id="BoiteAresVerts"',
+// New Div AresVerts
+const newDivAresVerts = createNewDiv(
+    'id="AresVerts"',
     '/images/commandes/les-ares-verts-logo.png',
     'Les Ares Verts',
     'Commande de pommes, jus de pommes , compote, petillant, purée et chutney de légumes. commande jusqu\'au 03/02'
 );
 
-// Original Div  #BoitePotsPotes
-const oldDiv2 = document.querySelector('#BoitePotsPotes');
+// Original Div  #BoitesRoure
+const oldDiv2 = document.querySelector('#BoitesRoure');
 // New Div Les Pots-Potes
-const newDivPotsPotes = createNewDiv(
-    'id="lesPotsPotes"',
-    '/images/reseau/favicon.png',
-    'Les POT-POTES',
-    'Capendu, Douzens, Barbaira, Marseillette Les pots potes de l Alaric vous proposent une alternative à la grande distribution : écologique, économique, éthique et conviviale !'
+const newDivBoitesRoure = createNewDiv(
+    'id="RoureImg"',
+    '/images/commandes/RoureRiz.png',
+    'Riz de Roure',
+    'Le riz est produit par la même famille depuis 1920. Le Domaine est converti en 100% bio depuis 2012.'
 );
 
-// Original Div #BoiteLoco
-const oldDiv3 = document.querySelector('#BoitesLoco');
+// Original Div #Bioespuna
+const oldDiv3 = document.querySelector('#BoiteBioespuna');
 // New Div Les Pots-Potes
-const newDivLoco = createNewDiv(
-    'id="LocoMinges"',
-    '/images/reseau/Fichier_9logo-loco_tqqB5ku.jpg',
-    'LOCO MINGES',
-    'Saint-Gaudens, 31 Le Loco Minges est une épicerie coopérative où trouver des produits locaux de saison, sélectionnés par et pour les Loco Mangeurs.'
+const newDivBioespuna = createNewDiv(
+    'id="BioespunaImg"',
+    '/images/commandes/logotipo_bioespuna_fr.png',
+    'Bioespuna',
+    'Citrons, Oranges, Kakis,Avocats, Grenades, Amandes,Noix, Huile d\'olive,Pamplemousse,Olives.'
 );
 
 // Clic listener
-oldDiv1.addEventListener('click', () => replaceDiv(oldDiv1, newDivBiotineuses));
-newDivBiotineuses.addEventListener('click', () => returnToInitialState(newDivBiotineuses, oldDiv1));
+oldDiv1.addEventListener('click', () => replaceDiv(oldDiv1, newDivAresVerts));
+newDivAresVerts.addEventListener('click', () => returnToInitialState(newDivAresVerts, oldDiv1));
 
-oldDiv2.addEventListener('click', () => replaceDiv(oldDiv2, newDivPotsPotes));
-newDivPotsPotes.addEventListener('click', () => returnToInitialState(newDivPotsPotes, oldDiv2));
+oldDiv2.addEventListener('click', () => replaceDiv(oldDiv2, newDivBoitesRoure));
+newDivBoitesRoure.addEventListener('click', () => returnToInitialState(newDivBoitesRoure, oldDiv2));
 
-oldDiv3.addEventListener('click', () => replaceDiv(oldDiv3, newDivLoco));
-newDivLoco.addEventListener('click', () => returnToInitialState(newDivLoco, oldDiv3));
+oldDiv3.addEventListener('click', () => replaceDiv(oldDiv3, newDivBioespuna));
+newDivBioespuna.addEventListener('click', () => returnToInitialState(newDivBioespuna, oldDiv3));
+
+//! CLIC DU BOUTON DECONNECTION ET DES BOITES
+function redirigerVersCommandes() {
+    window.location.href = "Commandes.html";
+}

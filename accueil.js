@@ -21,9 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const prenom = parts[0];
         const nom = parts.slice(1).join(' ');
         document.getElementById("welcomeMessage").innerText = ` ${prenom} ${nom}  `;
-        document.getElementById("inputNom").value =  nom;
-        document.getElementById("inputPrenom").value = prenom;
-        document.getElementById("inputMail").value = prenom + "." +nom+"@pots-potes.fr";
 
     } else {
         document.getElementById("welcomeMessage").innerText = ` ${identifiant}`;
@@ -34,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
 function redirigerVersConnexion() {
     window.location.href = "connexion.html";
 }
-
 function redirigerVersMonCompte() {
     window.location.href = "monCompte.html";
 }
@@ -76,3 +72,4 @@ function activerModePleinEcran(imgMiniature, imgPleinEcran) {
 // IMAGE ARBO
 activerModePleinEcran(document.getElementById('thumbnailDiagSeq'), document.getElementById('diagSeq'));
 toggleThumbnailOnClick(document.querySelector("#lesPotsPotes"), document.querySelector("#thumbnailDiagSeq"));
+
