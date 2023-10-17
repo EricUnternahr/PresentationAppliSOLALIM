@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOLALIM Mes commandes</title>
+    <title>SOLALIM Commandes en cours</title>
     <link rel="icon" type="image/png" sizes="96x96" href="/images/faviconSolalim.png">
     <!-- Font ROBOTO -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -125,7 +125,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!--*PAGE D ACCUEIL MON COMPTE -->
+                        <!--*MES COMMANDES EN COURS ET PASSEES -->
                         <div class="container mt-4 ">
                             <div class="row ">
                                 <div class=col-8>
@@ -136,14 +136,14 @@
                                 </div>
                             </div>
                         </div>  
-                        <!-- Boites Producteurs -->
+                        <!-- BOITES COMMANDES -->
                         <div class="container">
                             <div id="ligneVide" class="row">
                             </div>
                             <div class="row" >
-                                <div class="col-12 " >
+                                <div class="col-12" onclick="redirigerVerscommandesEnCours()" >
                                     <div  id="commandeCours" class="mx-auto">
-                                        <div class="ma-boite text-center" onclick="redirigerVerscommandesEnCours()">
+                                        <div class="ma-boite text-center" >
                                             <p class="menu">Commandes reseau en cours</p>
                                             <p class="description"> Ares Verts Pommes</p>
                                             <p class="description"> Riz Marseillette</p>
@@ -153,21 +153,20 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-12  ">
+                                <div class="col-12" onclick="redirigerVersmesCommandesEnCours()">
                                     <div  id="mesCommandesCours" class="mx-auto">
-                                        <div class="ma-boite text-center" onclick="redirigerVersmesCommandesEnCours()">
+                                        <div class="ma-boite text-center">
                                             <p class="menu">Mes commandes en cours</p>
-                                            <p class="description">Ares Verts Pommes 64€</p>
-                                            <p class="description"> Orange Avocats BIOESPUNA 85€</p>
+                                            <p id="commandeAresVerts" class="description"></p>
                                             
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row " >
-                                <div class="col-12 ">
+                            <div class="row" >
+                                <div class="col-12" onclick="redirigerVersCommandesPassees()">
                                     <div  id="CommandesPassees" class="mx-auto">
-                                        <div class="ma-boite text-center" onclick="redirigerVersCommandesPassees()">
+                                        <div class="ma-boite text-center" >
                                             <p class="menu">Mes commandes passées</p>
                                             <p class="description"> Fromages Coop Jura 130€</p>
                                             <p class="description"> Legumes Trebes 20€</p>

@@ -13,7 +13,6 @@ function toggleThumbnailOnClick(triggerElement, thumbnailElement) {
     let isThumbnailVisible = true;
     triggerElement.addEventListener('click', () => {
         thumbnailElement.style.visibility = isThumbnailVisible ? 'visible' : 'hidden';
-        console.log('Cela a été cliqué');
         isThumbnailVisible = !isThumbnailVisible;
     });
 }
@@ -52,7 +51,7 @@ toggleThumbnailOnClick(document.querySelector("#logo"), document.querySelector("
 
 // IMAGE PERSONNAS
 activerModePleinEcran(document.getElementById('thumbnailPerso'), document.getElementById('imgPerso'));
-toggleThumbnailOnClick(document.querySelector("#identifiant"), document.querySelector("#thumbnailPerso"));
+toggleThumbnailOnClick(document.querySelector("#clicPersonnas"), document.querySelector("#thumbnailPerso"));
 
 // ! BOUTON SWITCH
 const switchElement = document.getElementById('switch');

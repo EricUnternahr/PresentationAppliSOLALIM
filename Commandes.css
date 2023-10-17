@@ -236,7 +236,7 @@ select {
 }
 /*TOTAL COMMANDE*/
 #TotalDeLaCom{
-    border: 3px solid #f35506; 
+    border: 3px solid #efedeb; 
     border-radius: 25px;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
     margin-top: 10px;

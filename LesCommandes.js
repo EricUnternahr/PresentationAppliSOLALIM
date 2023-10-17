@@ -49,6 +49,14 @@ function activerModePleinEcran(imgMiniature, imgPleinEcran) {
     });
 }
 
-// IMAGE ARBO
+//! IMAGE ARBO
 activerModePleinEcran(document.getElementById('thumbnailDiagSeq'), document.getElementById('diagSeq'));
 toggleThumbnailOnClick(document.querySelector("#lesPotsPotes"), document.querySelector("#thumbnailDiagSeq"));
+
+// !MISE A JOUR DE LA BOITE MES COMMANDES EN COURS
+document.addEventListener("DOMContentLoaded", function() {
+    const TotCommande = localStorage.getItem("TotalCommande")
+    if(TotCommande!=0){
+        document.getElementById("commandeAresVerts").innerText = `Ares Verts pour une commande de ${TotCommande} € `;
+    };
+});

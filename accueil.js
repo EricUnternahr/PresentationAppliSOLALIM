@@ -13,8 +13,8 @@ if (switchElement.checked) {
 }
 });
 //! AFFICHAGE DU NOM RECUPERE PAR LE FORMULAIRE
-document.addEventListener("DOMContentLoaded", function() {
-    const identifiant = localStorage.getItem("identifiant");
+document.addEventListener("DOMContentLoaded", async function() {
+    const identifiant = await localStorage.getItem("identifiant");
     const parts = identifiant.split(' ');
 
     if (parts.length >= 2) {
