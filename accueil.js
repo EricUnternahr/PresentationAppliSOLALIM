@@ -12,6 +12,7 @@ if (switchElement.checked) {
     bodyElement.classList.add('body-dark');
 }
 });
+
 //! AFFICHAGE DU NOM RECUPERE PAR LE FORMULAIRE
 document.addEventListener("DOMContentLoaded", async function() {
     const identifiant = await localStorage.getItem("identifiant");

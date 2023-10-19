@@ -34,22 +34,33 @@ function replaceDiv(oldPassword, newPassword, repeatPassword) {
     const newPasswordValue=document.getElementById("newPassword").value;
     const repeatPasswordValue=document.getElementById("repeatPassword").value;
     newDiv.id = "newDiv";
-    console.log(oldPasswordValue);
-    console.log(newPasswordValue);
-    console.log(repeatPasswordValue);
 
     if(oldPasswordValue==="" || newPasswordValue==="" || repeatPasswordValue===""){
         newDiv.innerHTML = "<p>Certains champs sont vides. Veuillez remplir tous les champs.</p>";
         oldDiv.parentNode.replaceChild(newDiv, oldDiv);
+        setTimeout(function() {
+            newDiv.parentNode.replaceChild(oldDiv,newDiv);
+        }, 2000);
         } else if (newPasswordValue!=repeatPasswordValue){
             newDiv.innerHTML = "<p>Les mots de passe ne correspondent pas. Veuillez réessayer.</p>";
             oldDiv.parentNode.replaceChild(newDiv, oldDiv);
+            setTimeout(function() {
+                newDiv.parentNode.replaceChild(oldDiv,newDiv);
+            }, 2000);
         } else if(oldPasswordValue==newPasswordValue){
             newDiv.innerHTML = "<p>Le nouveau mot de passe doit être différent de l'ancien. Veuillez choisir un nouveau mot de passe.</p>";
             oldDiv.parentNode.replaceChild(newDiv, oldDiv);
+            setTimeout(function() {
+                newDiv.parentNode.replaceChild(oldDiv,newDiv);
+            }, 2000);
         }
         else{
-            window.location.href = "accueil.html";
+            newDiv.innerHTML = "<p>Le nouveau mot de passe est enregistré.</p>";
+            oldDiv.parentNode.replaceChild(newDiv, oldDiv);
+            setTimeout(function() {
+                window.location.href = "accueil.html";
+            }, 2000);
+            
 
         }
     

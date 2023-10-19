@@ -8,13 +8,7 @@ togglePassword.addEventListener('click', () => {
     togglePassword.querySelector('i').classList.toggle('bi-eye');
 });
 
-//! CLIC DU BOUTON valider
-function redirigerVersConnexion() {
-    alert("Désinscription prise en compte");
-    setTimeout(function() {
-        window.location.href = "connexion.html";
-    }, 1000);
-}
+
 
 
 // ! BOUTON SWITCH
@@ -32,6 +26,32 @@ if (switchElement.checked) {
 }
 });
 
+//!MESSAGE DE CONFIRMATION
+function replaceDiv() {
+    const oldDiv = document.getElementById("oldDiv");
+    const newDiv = document.createElement("div");
+    const passwordValue=document.getElementById("password").value;
+    newDiv.id = "newDiv";
+    newDiv.className = " text-center mx-auto"
+
+    if(passwordValue===""){
+        newDiv.innerHTML = `<div ><div class=" mb-1"><img src="/images/triangle.png" alt="Triangle d'avertissement"></div>
+        <h5>Le mot de passe est necessaire!</h5></div>`;
+        oldDiv.parentNode.replaceChild(newDiv, oldDiv);
+        setTimeout(function() {
+            newDiv.parentNode.replaceChild(oldDiv,newDiv);
+        }, 3000);
+        }
+        else{
+    newDiv.innerHTML = `<div ><div class=" mb-1"><img src="/images/triangle.png" alt="Triangle d'avertissement"></div>
+    <h5>La desinscription est effectuée!</h5></div>`;
+    oldDiv.parentNode.replaceChild(newDiv, oldDiv);
+    setTimeout(function() {
+        window.location.href = "connexion.html";
+        }, 3000);
+    }
+}
+    
 
 
 

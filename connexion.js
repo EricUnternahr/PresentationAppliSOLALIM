@@ -51,7 +51,7 @@ toggleThumbnailOnClick(document.querySelector("#logo"), document.querySelector("
 
 // IMAGE PERSONNAS
 activerModePleinEcran(document.getElementById('thumbnailPerso'), document.getElementById('imgPerso'));
-toggleThumbnailOnClick(document.querySelector("#clicPersonnas"), document.querySelector("#thumbnailPerso"));
+toggleThumbnailOnClick(document.querySelector("#identifiant"), document.querySelector("#thumbnailPerso"));
 
 // ! BOUTON SWITCH
 const switchElement = document.getElementById('switch');
@@ -68,9 +68,20 @@ if (switchElement.checked) {
 }
 });
 
+
+//! CLICK PAR ENTREE
+document.addEventListener("keyup", function(e) {
+    if (e.key === 'Enter') {
+        document.getElementById("btonForm").click();
+    }
+});
+
 // ! RECUPERER L IDENTIFIANT
+document.getElementById("submit").onclick = function() {
+    alert('Clicked!');
+}
 function saveIdentifiant() {
-    localStorage.setItem("identifiant", document.getElementById("identifiant").value);
+    localStorage.setItem("identifiant", document.getElementById("user").value);
     window.location.href = "accueil.html";
 
 }
