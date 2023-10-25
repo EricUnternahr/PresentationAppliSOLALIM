@@ -66,9 +66,6 @@ function replaceDiv(oldPassword, newPassword, repeatPassword) {
     
 }
 
-
-
-
 //! AFFICHE L'IMAGE QUAND L ELEMENT EST CLICK
 function toggleThumbnailOnClick(triggerElement, thumbnailElement) {
     let isThumbnailVisible = true;
@@ -78,7 +75,6 @@ function toggleThumbnailOnClick(triggerElement, thumbnailElement) {
         isThumbnailVisible = !isThumbnailVisible;
     });
 }
-
 
 //! AGRANDIR IMAGE A 100%
 // function activerModePleinEcran(imgMiniature, imgPleinEcran) {
@@ -114,24 +110,4 @@ function toggleThumbnailOnClick(triggerElement, thumbnailElement) {
 // // IMAGE PERSONNAS
 // activerModePleinEcran(document.getElementById('thumbnailPerso'), document.getElementById('imgPerso'));
 // toggleThumbnailOnClick(document.querySelector("#identifiantLabel"), document.querySelector("#thumbnailPerso"));
-
-// ! BOUTON SWITCH
-const switchElement = document.getElementById('switch');
-
-switchElement.addEventListener('change', () => {
-const bodyElement = document.body;
-
-if (switchElement.checked) {
-    bodyElement.classList.remove('body-dark');
-    bodyElement.classList.add('body-light');
-} else {
-    bodyElement.classList.remove('body-light');
-    bodyElement.classList.add('body-dark');
-}
-});
-
-
-
-
-
 

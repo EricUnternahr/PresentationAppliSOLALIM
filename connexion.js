@@ -53,21 +53,6 @@ toggleThumbnailOnClick(document.querySelector("#logo"), document.querySelector("
 activerModePleinEcran(document.getElementById('thumbnailPerso'), document.getElementById('imgPerso'));
 toggleThumbnailOnClick(document.querySelector("#identifiant"), document.querySelector("#thumbnailPerso"));
 
-// ! BOUTON SWITCH
-const switchElement = document.getElementById('switch');
-
-switchElement.addEventListener('change', () => {
-const bodyElement = document.body;
-
-if (switchElement.checked) {
-    bodyElement.classList.remove('body-dark');
-    bodyElement.classList.add('body-light');
-} else {
-    bodyElement.classList.remove('body-light');
-    bodyElement.classList.add('body-dark');
-}
-});
-
 
 //! CLICK PAR ENTREE
 document.addEventListener("keyup", function(e) {
@@ -77,9 +62,7 @@ document.addEventListener("keyup", function(e) {
 });
 
 // ! RECUPERER L IDENTIFIANT
-document.getElementById("submit").onclick = function() {
-    alert('Clicked!');
-}
+
 function saveIdentifiant() {
     localStorage.setItem("identifiant", document.getElementById("user").value);
     window.location.href = "accueil.html";

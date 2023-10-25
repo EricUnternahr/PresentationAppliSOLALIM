@@ -1,18 +1,3 @@
-// ! BOUTON SWITCH
-const switchElement = document.getElementById('switch');
-
-switchElement.addEventListener('change', () => {
-const bodyElement = document.body;
-
-if (switchElement.checked) {
-    bodyElement.classList.remove('body-dark');
-    bodyElement.classList.add('body-light');
-} else {
-    bodyElement.classList.remove('body-light');
-    bodyElement.classList.add('body-dark');
-}
-});
-
 //! CLIC DU BOUTON DECONNECTION ET DES BOITES
 function redirigerVersLesCommandes() {
     alert("Commande prise en compte");
@@ -20,7 +5,6 @@ setTimeout(function() {
     window.location.href = "LesCommandes.html";
 }, 1000);
 }
-
 
 //!CALCUL DES COMMANDES
 localStorage.setItem("Total1", "0");
